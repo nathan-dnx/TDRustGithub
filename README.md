@@ -67,4 +67,17 @@ Exemple pour un premier commit :
 cargo run -- commit-tree <tree_sha> -p 0000000000000000000000000000000000000000 -m "Initial commit"
 
 
+
+Les principales fonctions :
+
+Fonction                  	Rôle
+write_object	             Écrit un blob/tree/commit compressé
+read_object_raw          	Décompresse un objet Git
+write_blob_from_file     	Construit un blob
+write_tree_rec	           Construit un tree récursivement
+write_commit	             Construit un commit
+hex_to_bin	               Convertit SHA hex → 20 bytes
+split_header_body	        Sépare l’en-tête Git du contenu
+
+
 Retourne le SHA du commit, écrit dans .git/objects.
